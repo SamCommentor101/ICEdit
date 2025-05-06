@@ -29,6 +29,7 @@ parser.add_argument("--output-dir", type=str, default="gradio_results", help="Di
 parser.add_argument("--flux-path", type=str, default='black-forest-labs/flux.1-fill-dev', help="Path to the model")
 parser.add_argument("--lora-path", type=str, default='RiverZ/normal-lora', help="Path to the LoRA weights")
 parser.add_argument("--enable-model-cpu-offload", action="store_true", help="Enable CPU offloading for the model")
+parser.add_argument("--share", action="store_true", help="Enable public Gradio link")
 args = parser.parse_args()
 
 pipe = FluxFillPipeline.from_pretrained(args.flux_path, torch_dtype=torch.bfloat16)
