@@ -213,4 +213,4 @@ For more details, check out our [Github Repository](https://github.com/River-Zha
         outputs=[result, seed]
     )
 
-demo.launch(server_port=args.port)
+demo.launch(server_port=args.port, share=True)
